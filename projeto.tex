@@ -1,0 +1,300 @@
+\documentclass[twoside,12pt,a4paper]{report}
+\usepackage[english,brazilian]{babel}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+\usepackage[twoside,margin=1.2in]{geometry}
+\usepackage{graphicx}
+\graphicspath{ {figuras/} }
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[square,sort]{natbib}
+\usepackage{titlesec}
+\usepackage{verbatim}
+\usepackage[textfont={scriptsize}]{caption,subcaption}
+\setlength{\topmargin}{0cm}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\usepackage{appendix}
+\usepackage[final]{pdfpages}
+
+\begin{document}
+
+\title{Mecanismos de determinação da distribuição espacial e coexistência em florestas tropicais:
+filtragem de nicho, dispersão e facilitação}
+\author{Mali Oz Cenamo Salles}
+
+%\maketitle
+
+\begin{abstract}
+
+A análise da distribuição espacial dos indivíduos de uma comunidade vegetal tropical pode dar muita
+informação sobre os processos que organizam essa comunidade. Dados de parcelas permanentes mostram
+que um grande número de pares de espécies de árvores tem associação espacial positiva. Neste
+trabalho, investigaremos associações espaciais positivas entre espécies vegetais, e compararemos
+três mecanismos possíveis causadores dessas associações espaciais: filtragem ambiental sob uma
+dinâmica neutra, interação ecológica positiva (facilitação) e co-dispersão (dispersão para os mesmos
+ambientes).
+
+\end{abstract}
+
+\section{Introdução}
+
+A análise da distribuição espacial dos indivíduos de uma comunidade vegetal tropical pode dar muita
+informação sobre os processos que organizam essa comunidade. O padrão de pontos da disposição de
+indivíduos vegetais em diferentes estágios de vida pode ser usado como sinal da dispersão dos
+indivíduos e das interações entre esses indivíduos e dos indivíduos com o ambiente. Por exemplo, o
+grau de agregação ds indivíduos e uma espécie pode ser indicativo de uma baixa capacidade de
+dispersão \citep{ref} ou de uma restrição a manchas de hábitat \citep{refs}; a dissociação espacial entre
+juvenis e adultos de uma espécie pode ser indício de processos de Janzen-Connel \citep{Hubbell1979};
+a dissociação espacial entre adultos é interpretada como conseqüência de competição \citep{refs}, e a
+associação espacial, de facilitação \citep{Castanho2012; Haase2001}.
+
+“Facilitação” é o termo usado em ecologia para se referir às interações ecológicas positivas entre
+organismos do mesmo nível trófico \citep{Pakeman2009}. A facilitação pode permitir que uma
+espécie ocupe um ambiente no qual ela não se estabeleceria por conta própria \citep{Lortie2004},
+ou acelerar a colonização de um novo ambiente (inclusive por espécies invasoras, v.
+\citep{Wundrow2012}, ou aumentar a abundância de uma espécie em determinada comunidade \citep{Alados2006; CallawayBook}.
+
+Até os anos 90, muitos casos de facilitação eram conhecidos, mas era pouco estudada a importância
+dessas interações para a composição das comunidades. Segundo \citep{CallawayBook}, predominava uma visão
+individualística das comunidades, segundo a qual as comunidades vegetais eram determinadas por
+eventos estocásticos de dispersão, adaptação do organismos ao ambiente abiótico e competição entre
+as espécies. Assim, a coexistência de espécies semelhantes no mesmo habitat se tornou uma das
+grandes questões as biologia. Atualmente, a facilitação é entendida como um mecanismo da
+coexistência de espécies, especialmente em ambientes com alto estresse ambiental; mas ainda não é
+tão estudada quanto outros mecanismos como filtragem ambiental, competição intraespecífica, ou
+processos neutros.
+
+
+A adaptação de uma espécie ao seu ambiente pode impactar o desenvolvimento e a sobrevivência dos
+indivíduos dependendo das condições locais, bióticas e abióticas. Assim, ao longo da ontogenia da
+planta a disposição dos indivíduos deve estar mais e mais restrita àqueles locais que eram
+favoráveis ao seu desenvolvimento, um conceito denominado “filtragem ambiental” \citep{ref}. Esse efeito
+pode ser investigado através da análise da distribuição espacial dos indivíduos de uma espécie, à
+procura de associação espacial dos indivíduos com os fatores que beneficiam seu desempenho. A
+associação entre espécies diferentes e as mesmas variáveis ambientais (isto é, a similaridade
+ecológica entre duas espécies, no que toca ao uso de recursos e a tolerância as condições
+ambientais) levaria secundariamente a uma associação espacial entre elas, já que elas estariam
+ligadas aos mesmos microhabitats \citep{Velazquez2015}. Assim, a filtragem ambiental é um
+mecanismo que determina a distribuição espacial das populações e também as associações
+intraespecíficas.
+
+Na interpretação de filtragem de nicho, os filtros para a ocupação de um certo ambiente por uma
+certa espécie são ordenados de forma que o filtro ambiental (nicho) é anterior ao filtro das
+interações interespecíficas, como a competição \citep{Grimes}. A facilitação subverte a ordem desses
+filtros, já que é uma interação ecológica que possibilita a ocupação de ambientes que seriam de
+outra forma intoleráveis \citep{Lortie2004}. Assim, esperamos que na presença de facilitação, a
+disposição espacial de uma espécie facilitada seja determinada pela disposição da facilitadora, e
+não apenas pelas variáveis ambientas.
+
+A importância da facilitação foi demonstrada principalmente em ambientes de alto estresse ambiental,
+ao qual um pequeno número de espécies seria tolerante \citep{BertnessHacker1994, Brooker2008}. 
+Mais recentemente, a facilitação tem sido descrita em uma grande variedade de ambientes, em
+uma variedade de formas \citep{McIntire2014}, mas o fenômeno é mais estudado em ambientes com
+condições extremas, especialmente em gradientes de estresse, e na facilitação como redução do
+estresse abiótico \citep{Brooker2008}. Ambientes em que facilitação foi demonstrada entre pares de
+espécies incluem florestas temperadas \citep{refs}, pântanos/charcos \citep{BertnessHacker1994, etc},
+dunas arenosas \citep{Castanho2014, etc}, … . Em florestas tropicais, a facilitação é freqüentemente
+estudada no contexto da sucessão ecológica, tanto em áreas degradadas e florestas secundárias (refs
+refs refs) quanto em clareiras em florestas antigas \citep{refs refs refs}, mas recentemente, alguns
+estudos têm sugerido que a facilitação é um mecanismo importante em florestas tropicais
+\citep{Ledo2015,refs}. O ambiente sombreado numa
+floresta tropical pode ser considerado inteiramente facilitativo para as espécies do sub-bosque
+\citep{McIntire2014}, entretanto, propriedades ambientais tão ubíquas raramente são estudadas
+no contexto de facilitação, no qual é mais comum procurar-se interações espécie-específicas, ou
+facilmente detectáveis numa paisagem heterogênea \citep{TODO procurar refs}.
+
+A Floresta de Restinga é um ambiente propício para detecção de facilitação devido ao alto estresse
+ambiental, dado o solo arenoso e pobre em nutrientes, e a ocorrência de inundações sazonais de água
+salgada ou salobra \citep{TODO refs}. Possíveis mecanismos de facilitação incluiriam sombreamento
+\citep{Castanho2014, etc}, enriquecimento de solo através de serrapilheira (achar refs, atração de
+organismos dispersores \citep{achar refs CallawayBook} ou de organismos que controlem a ação de
+herbívoros \citep{refs}, associações benéficas com micorriza \citep{Simard1997}, proteção
+estrutural contra estresse mecânico \citep{refs}, fusão de fustes \citep{McIntire2011}, entre
+outros. Facilitação através de micorriza foi demonstrada em \citep{Simard1997} e a presença de
+micorriza pode aumentar a tolerância de espécies arbóreas à inundação \citep{Fougnies2007}. Esses
+mecanismos dependem de características de ambas as espécies para terem efeito sobre as populações;
+porém, algumas dessas características podem ser comuns a um grande número de espécies (por exemplo,
+a capacidade de sombreamento), gerando o que chamaríamos de interações promíscuas, onde a interação
+seria entre grupos de espécies.
+
+Por fim, como terceiro mecanismo de agregação, conjecturamos que a dispersão de sementes pode ser
+direcionada de forma que espécies diferentes possam ter suas sementes agregadas pelo mecanismo de
+dispersão. Por exemplo, sementes dispersas pelo mesmo organismo dispersor podem estar sendo
+transportadas para os mesmos locais. Essa conjectura se inspira na Hipótese de Dispersão
+Direcionada, segundo a qual organismos dispersores podem transportar sementes para ambientes
+favoráveis \citep{Wenny2001, TODO,morerefs}. Imaginamos que espécies com síndromes de dispersão
+semelhantes estejam associadas dessa forma.
+
+Minha intenção é investigar processos que podem gerar o padrão de agregação entre espécies
+diferentes. 1) Espécias sujeitas aos mesmos filtros ambientais devem ocorrer preferencialmente
+nos mesmos microhabitats, o que, na ausência de outros mecanismos ecológicos, levaria essas
+espécies a estarem associadas espacialmente. 2) Uma espécie que é beneficiada por outra tende a
+ocorrer associada a essa outra. 3) Espécies cujas sementes estejam dispersas pelos mesmos
+mecanismos talvez estejam associadas através da dispersão.
+
+A proposta deste trabalho é distingüir entre esses processos usando dados de distribuição espacial, medições de variáveis ambientais e dados da chuva de sementes.
+
+\subsubsection{Previsões}
+
+O processo de filtragem ambiental deve gerar um padrão de agregação intraespecífica, já que os
+indivíduos de uma mesma espécie devem ocorrer no mesmo microhabitat. Além disso, prevemos encontrar
+correlação entre a presença de indivíduos dessa espécie e um conjunto de intervalos de valores de
+variáveis abióticas, que representariam seu nicho fundamental \citep{Hutchinson1957}. Se a
+agregação espacial entre duas espécies é causada por uma adaptação às mesmas condições ambientais,
+devemos encontrá-las associadas às mesmas variáveis.
+
+O processo de facilitação deve gerar um padrão de agregação da espécie facilitada em torno na
+espécie facilitadora. Não há previsão de que a facilitadora esteja agregada (exceto pelo efeito de
+outros mecanismos). Porém, as variáveis ambientais também podem ser alteradas localmente pelos
+organismos presentes, por exemplo através de sombreamento, associação de micorriza, ou
+serrapilheira; de fato, as formas mais comuns de facilitação são através de alteração de
+características ambientais \citep{TODO,refs}. Testaremos alguns métodos para distingüir entre simples
+filtragem ambiental e filtragem ambiental intermediada por facilitação: primeiramente, esperamos que
+no caso de facilitação a associação entre as espécies seja mais forte do que esperado apenas
+levando-se em conta a associação delas com as variáveis ambientais, então faremos um modelo de
+simulação da distribuição espacial dos indivíduos sob filtragem ambiental para usar como modelo
+nulo.
+
+O processo de co-dispersão deve causar um padrão de agregação na chuva de sementes. Podemos avaliar
+a relevância do padrão de dispersão da chuva de sementes com o padrão de dispersão dos indivíduos
+estabelecidos; esperamos que haja associação entre adultos e sementes de uma mesma espécie, e que no
+caso de co-dispersão, a associação entre sementes de espécies diferentes seja mais forte do que o
+esperado considerando a associação entre os adultos da mesma espécie.
+
+Um objetivo deste trabalho é testar a hipótese de que facilitação é um mecanismo importante de
+coexistência em uma formação florestal tropical sujeita à alagamento (Floresta de Restinga). Para
+isso, perguntamos: (1) há associação espacial entre populações de diferentes espécies? (2) Para
+populações associadas, os indivíduos têm distribuição agregada e associada a variáveis ambientais?
+(3) Nesse caso, existe associação das variáveis ambientais a uma das espécies? (4) Para essas mesmas
+populações, a associação entre as espécies ocorre desde a chuva de sementes? Esperamos que, se
+facilitação for um processo ecológico importante, ocorra associação espacial entre populações de
+diferentes espécies e que essa associação não seja explicada pelas características do ambiente e da
+chuva de sementes, ou que a associação seja assimétrica, e que as variáveis ambientais estejam
+alteradas por uma espécie.
+
+A tese será dividida em dois capítulos que abordam diferentes processos ecológicos levando à
+associação espacial de populações de diferentes espécies. No primeiro capítulo, analisaremos o
+padrão espacial da chuva de sementes em comparação com a distribuição dos adultos, de acordo com a
+teoria de que a distribuição dos adultos esteja determinada pela chuva de sementes. No segundo
+capítulo, abordaremos a relação espacial entre populações de diferentes espécies e com variáveis
+ambientais, testando a hipótese da associação das espécies com características ambientais conforme a
+Teoria de Nicho.
+
+
+\section{Justificativa}
+
+O padrão espacial de uma comunidade permite importantes inferências a respeito dos processos que
+estruturam a comunidade e permitem a coexistência de um grande número de espécies, e há atualmente
+um grande número de projetos ao redor do mundo mapeando parcelas de florestas para compreender a
+estrutura da diversidade. Entretanto, o mesmo padrão pode ser gerado por uma grande variedade de
+processos. Este projeto visa avançar a metodologia de diferenciação dos processos por trás de
+padrões espaciais, além de aplicar esses métodos para compreender os principais mecanismos
+determinando a composição da comunidade da Floresta de Restinga. Diversos estudos usam a facilitação
+como estratégia de restauração de florestas tropicais \citep{Zwiener2014,ref}, e o
+conhecimento sobre formas de facilitação pode ajudar a propor novas estratégias.
+
+\section{Área de estudo}
+A Mata Atlântica tem apenas 11,4 a 16\% de sua área original restantes \citep{Ribeiro2009}, e
+devido a sua alta riqueza de espécies endêmicas, a mata ao longo da costa é classificada como um dos
+hotspots para conservação da biodiversidade \citep{Myers2000}. Boa parte de sua área preservada
+está no Parque Estadual da Serra do Mar. A Floresta de Restinga é uma formação florestal que ocorre
+de 0 a 50m de altitude, próxima ao mar, sobre cordões arenosos \citep{Joly2008}. No presente
+estudo, os dados foram e serão coletados em uma parcela permanente de 1 ha de Floresta de Restinga
+do Núcleo Picinguaba do Parque Estadual da Serra do Mar, instalada no âmbito do Projeto Temático
+“Gradiente Funcional” (Biota/FAPESP 03/12595-7) e subdividida em 100 subparcelas de 10 m x 10 m. A
+parcela se localiza próxima à Praia da Fazenda, Ubatuba-SP, a cerca de 10m de altitude, e parte de
+sua área é alagada periodicamente.
+
+
+
+\section{Análises de dados}
+
+Para analisar os dados de padrão de pontos, usaremos como referência \citep{IllianBook} e
+\citep{WiegandBook}, usando principalmente a função de associação espacial de pontos bivariada
+$g_{ab}(r)$ \citep{IllianBook,WiegandBook,Stoyan1994}. Essa função, também chamada de medida de
+anéis em O, representa o número de indivíduos do grupo $b$ presentes na classe de distância $r$ em
+torno de indivíduos do grupo $a$, normalizada em relação ao valor esperado da função para uma
+distribuição uniforme (aleatória). Dessa forma, $g_{ab}(r) > 1$ significa que há mais indivíduos a
+espécie $b$ a um raio $r$ de invidívuos da espécie $a$ do que o esperado,
+enquanto $g_{ab}(r) < 1 $ significa que o número de indivíduos nessa classe de distâncias é menor
+que o esperado. A estatística $g_{ab}(r)$ dá informação sobre associação e dissociação espacial
+entre dois grupos de indivíduos em várias escalas de distância, de forma que podemos obter um padrão
+misto, como dissociação em curtas distâncias e associação em distâncias maiores, ou vice versa. O
+raio máximo para o qual podemos usar essa estatística é igual a metade da menor dimensão da parcela
+onde os indivíduos foram mapeados; neste caso, 50m \citep{IllianBook}. Neste trabalho usaremos essa
+função para avaliar o padrão de associação espacial entre pares de espécies, e também o padrão de
+agregação ou desagregação de uma espécie, expresso pela função de associação de uma espécie com ela
+mesma ($g_{aa}(r)$).
+
+Para avaliar a significância dos padrões encontrados, faremos simulações computacionais de padrões
+de pontos para representar o modelo nulo de padrão aleatório. Cada simulação gerará um valor de
+$g$, que será usado para gerar um envelope de confiança e uma estatística de significância
+\citep{IllianBook,DiggleBook}. Porém, como estaremos aplicando essa estatística em toda uma
+comunidade, a análise de significância par-a-par pode levar a uma alta probabilidade de erro tipo 1.
+Por isso, farei uma revisão da literatura em busca de métodos aplicáveis para um grande número de
+espécies e formas de controlar esse erro. Além disso, usarei uma simulação de um modelo neutro
+espacialmente explícito para comparar, entre o modelo neutro e os dados reais, a quantidade de pares de espécies para os quais a estatística
+$g$ é significativa.
+
+As variáveis ambientais foram coletadas por \cite{Kelly} em cada uma das subparcelas de 10mx10m.
+Para comparar a distribuição espacial dos indivíduos com as variáveis ambientais, usaremos o dado de
+densidade de indivíduos de cada espécie em cada parcela. Parte deste trabalho será estudar os
+melhores modelos para prever a densidade das espécies a partir das variáveis ambientais, e
+selecionar o melhor modelo para cada espécie usando AIC (v. \cite{Bagchi2011,Henrys2009}). A partir
+dessa análise da densidade, poderemos simular a distribuição dos indivíduos de cada espécie
+determinada apenas pelas variáveis ambientais usando processos de Poisson heterogêneos
+\citep{WiegandBook}, com a função de densidade determinada pelo modelo selecionado. Usaremos essas
+simulações como um segundo modelo para calcular a estatística $g$, para avaliar se a
+estatística $g$ é prevista pela associação das espécies com variáveis ambientais, ou se há uma
+associação ou dissociação significativa entre espécies que não é explicada pelas variáveis
+ambientais.
+
+A chuva de sementes está sendo coletada mensalmente em 60 coletores circulares dispostos
+aproximadamente no centro de subparcelas que foram selecionadas aleatoriamente dentre as 100
+disponíveis. As sementes serão identificadas e classificadas de acordo com a síndrome de dispersão.
+Usarei modelos lineares generalizados para medir a influência da proximidade de adultos da mesma
+espécie na densidade de sementes em cada coletor \citep{Hardesty2002}. Também determinarei se há
+associação espacial entre as
+chuvas de sementes de espécies diferentes usando SADIE (Spatial Analysis by Distance Indices –
+\cite{Perry1995}), uma técnica que integra a estrutura espacial das amostras no cálculo da
+correlação \citep{Li2012}. Caso encontre associação, tentarei determinar se ela pode ser prevista pela presença dos adultos (usando as densidades previstas pelos
+modelos lineares) ou pela síndrome de dispersão.
+
+\section{Cronograma}
+
+	\begin{figure}[ht]
+		\centering \includegraphics[width=16cm]{cronograma.png}
+    \end{figure}
+
+A qualificação no Programa de Pós-Graduação em Ecologia da UNICAMP está prevista para o final do
+primeiro ano. Ao longo dos três anos, serão feitos três relatórios (dois parciais e um final),
+cursadas disciplinas de interesse e realizados estágios de docência. Também participarei de
+congressos, onde apresentarei trabalhos resultantes deste projeto.
+
+\section{Resultados esperados}
+O presente estudo contribuirá para o entendimento dos fatores que determinam a distribuição espacial
+das espécies arbóreas em florestas tropicais, e para o conhecimento das interações ecológicas entre
+espécies de árvores, resultando em última instância em avanço do conhecimento sobre a diversidade
+das florestas tropicais. Durante o projeto serão redigidos dois artigos, e o trabalho será apresentado
+em congressos.
+
+
+
+    \bibliographystyle{apalike}
+    \bibliography{tcc}
+\end{document}
