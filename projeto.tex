@@ -62,11 +62,16 @@ espécies de árvores coexistem em cada hectar. Portanto, temos ambientes propí
 que permitem a coexistência de muitas espécies em uma mesma comunidade.
 
 Alguns dos processos mais estudados associados à coexistência de espécies são repartição de
-nicho \citep{Hutchinson1957}, limitação de dispersão \citep{refs} e dependência negativa de densidade sobrecompensante
-(processos de Janzen-Connel)\citep{refs}. 
-Esses processos garantem que uma população limite seu próprio crescimento mais do que limita o
+nicho \citep{Hutchinson1957}, limitação de dispersão \citep{HurttPacala1995} e dependência
+negativa de densidade (DND)
+(processos de Janzen-Connel)\citep{Janzen1970}. 
+Na repartição de nicho, cada espécie se especializa em certos recursos ou condições
+ambientais, o que limita a competição entre as espécies. Já a limitação de dispersão gera
+agregação dos coespecíficos, o que faz com que a maior competição seja intraespecífica; e na
+DND, a densidade de cada população controla o crescomento populacional.
+Assim, esses processos garantem que uma população limite seu próprio crescimento mais do que limita o
 crescimento de populações de outras espécies, o que limita a possibilidade de exclusão
-competitiva. 
+competitiva.
 Esses processos também são espacialmente
 estruturados, produzindo padrões espaciais distintos. Por exemplo, processos de
 Janzen-Connel impossibilitam grandes agregações de indivíduos de uma mesma espécie,
@@ -172,7 +177,7 @@ conhecimento sobre formas de facilitação pode ajudar a propor novas estratégi
 A importância de facilitação é conhecida especialmente em ambientes com alto estresse
 ambiental, onde uma espécie mais tolerante ao estresse pode amenizar o estresse ambiental e
 permitir a sobrevivência de uma espécie mens tolerante \citep{BertnessHacker1994,
-BertnessCallaway1995}. 
+BertnessCallaway1994}. 
 A facilitação tem sido descrita em uma grande variedade de ambientes, em
 uma variedade de formas \citep{McIntire2014}, mas o fenômeno é mais estudado em ambientes com
 condições extremas, especialmente em gradientes de estresse, e na facilitação como redução do
@@ -208,8 +213,7 @@ micorriza pode aumentar a tolerância de espécies arbóreas à inundação \cit
 
 Para determinar quais espécies apresentam associação espacial usaremos a função de correlação
 de pares
-$g_{12}(r)$ \citep{IllianBook,WiegandBook,Stoyan1994,spatstatBook}. Essa função, também chamada de medida de
-anéis em O, representa o número de indivíduos do grupo 2 presentes na classe de distância $r$ em
+$g_{12}(r)$ \citep{IllianBook,WiegandBook,Stoyan1994,spatstatBook}. Essa função representa o número de indivíduos do grupo 2 presentes na classe de distância $r$ em
 torno de indivíduos do grupo 1, normalizada em relação ao valor esperado da função para uma
 distribuição uniforme (aleatória). Dessa forma, $g_{12}(r) > 1$ significa que há mais indivíduos a
 espécie 2 a um raio $r$ de invidívuos da espécie 1 do que o esperado (associação espacial),
@@ -258,7 +262,7 @@ se deva a autocorrelação espacial dos indivíduos, resultado da agregação ge
 de dispersão; nesse caso usaremos {\em Spatial
 EigenVector Mapping} (SEVM) para refinar a regressão. A análise SEVM cria variáveis virtuais
 extras para representar o efeito da autocorrelação espacial, e separar esse efeito dos outros
-fatores determinantes da densidade \citep{refSEVM}.
+fatores determinantes da densidade \citep{Dormann2007methods}.
 
 A chuva de sementes está sendo coletada mensalmente em 60 coletores circulares dispostos
 aproximadamente no centro de subparcelas que foram selecionadas aleatoriamente dentre as 100
