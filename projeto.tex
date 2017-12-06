@@ -210,69 +210,70 @@ relacionada à sobrevivência à inundação\citep{Fougnies2007}), proteção
 estrutural contra estresse mecânico \citep{refs}, fusão de fustes \citep{McIntire2011}, entre
 outros.
 
+\section{Coleta de Dados}
+
+A chuva de sementes está sendo coletada mensalmente em 60 coletores circulares dispostos
+aproximadamente no centro de subparcelas que foram escolhidas aleatoriamente dentre as 100
+disponíveis. As sementes serão identificadas e classificadas de acordo com a síndrome de
+dispersão, que já foi determinada para todas as espécies da parcela \citep{martins2014}.
+
 \section{Análises de dados}
 
-Para determinar quais espécies apresentam associação espacial usaremos a função de correlação
-de pares
-$g_{12}(r)$ \citep{IllianBook,WiegandBook,Stoyan1994,spatstatBook}. Essa função representa o número de indivíduos do grupo 2 presentes na classe de distância $r$ em
-torno de indivíduos do grupo 1, normalizada em relação ao valor esperado da função para uma
-distribuição uniforme (aleatória). Dessa forma, $g_{12}(r) > 1$ significa que há mais indivíduos a
-espécie 2 a um raio $r$ de invidívuos da espécie 1 do que o esperado (associação espacial),
-enquanto $g_{12}(r) < 1 $ significa que o número de indivíduos nessa classe de distâncias é menor
-que o esperado (dissociação espacial). A estatística $g_{12}(r)$ dá informação sobre associação e dissociação espacial
-entre dois grupos de indivíduos em várias escalas de distância, de forma que podemos obter um padrão
+Para determinar quais espécies apresentam populações com associação espacial usaremos a função de correlação
+de pares bivariada
+$g_{12}(r)$ \citep{Stoyan1994}. Essa função representa o
+número de indivíduos do padrão de pontos 2 dentro de um anel de raio $r$ e largura $dr$, 
+normalizada em relação ao valor esperado da função para um determinado modelo nulo (para o
+modelo nulo de distribuição uniforme, a normalização consiste em dividir pela intensidade
+$\lambda$ do padrão de pontos do padrão 2 na área de estudo). Dessa forma, $g_{12}(r) > 1$ significa que há mais indivíduos a
+espécie 2 a uma distância $r$ de indivíduos da espécie 1 do que o esperado segundo o modelo
+nulo, e $g_{12}(r) < 1 $ significa que o número de indivíduos da espécie 2 a distância $r$ de
+indivíduos da espécie 1 é menor
+que o esperado. A estatística $g_{12}(r)$ dá informação sobre a relação espacial
+entre dois padrões de pontos em várias escalas espaciais, de forma que podemos obter um padrão
 misto, como dissociação em curtas distâncias e associação em distâncias maiores, ou vice
-versa, e por isso é considerada a função de correlação de pontos mais informativa \citep{IllianBook}. O
-raio máximo para o qual podemos usar essa estatística é igual a metade da menor dimensão da parcela
-onde os indivíduos foram mapeados; neste caso, 50m. Neste trabalho usaremos essa
-função para avaliar o padrão de associação espacial entre pares de espécies, e também o padrão de
-agregação ou desagregação de uma espécie, expresso pela função de associação de uma espécie com ela
-mesma ($g_{11}(r)$). Para avaliar a simetria da associação espacial, calcularemos tanto
-$g_{12}$ quanto $g_{21}$, e compararemos os resultados. Se houver um raio para o qual $g_{12}
->1 $ e $g_{21} \leq 1$, então a associação será considerada assimétrica, isto é, a espécie 2
-é atraída pela espécie 1, mas a espécie 1 não é atraída pela espécie 2. Esse resultado é um
+versa \citep{WiegandMoloney2004}. Por isso, é considerada a estatística de segunda
+ordem mais informativa ára descrever padrões de pontos \citep{IllianBook}.  
+Para avaliar a simetria da associação espacial, calcularemos tanto
+$g_{12}(r)$ quanto $g_{21}(r)$, e compararemos os resultados. Se para uma mesma escala $r$,
+os valores de $g_{12}(r)$ diferirem dos de $g_{21}(r)$, então a relação espacial será
+considerada assimétrica. Se além disso um dos valores for maior do que 1, esse resultado é um
 sinal da ocorrência de facilitação.
 
-Para avaliar a significância dos padrões encontrados, faremos simulações computacionais de padrões
-de pontos para representar o modelo nulo de padrão aleatório. Cada simulação gerará um valor de
-$g$, que será usado para gerar um envelope de confiança e uma estatística de significância
-\citep{IllianBook,DiggleBook}. Usaremos como modelo nulo o Processo de Poisson Homogêneo,
-representando uma distribuição espacial uniformamente aleatória
-\citep{refs}. Para diferenciar a associação causada por facilitação da causada por filtragem
-de nicho, também usaremos como modelo nulo Processos de Poisson Heterogêneos (PPH), onde a
-densidade dos indivíduos de cada espécie varia no espaço. Se a função $g_{12}(r)$ gerada com
-os dados reais for
-significativamente maior que a gerada com PPH, então há um sinal significativo
-de facilitação, quanto se a função $g_{12}$ estiver contida no envelope de confiança gerado
-com PPH, isso indica que a associação espacial pode estar sendo produzida apenas por
-sobreposição de nicho.
+Para avaliar a significância dos padrões encontrados, faremos simulações de Monte-Carlo nas
+quais o padrão 1 é mantido fixo e o padrão 2 é distribuído aleatoriamente. 
+Cada simulação gerará um valor de $g$. Após as simulções, construiremos um envelope de confiança contendo 95\% dos valores de
+$g_{12}$ gerados. Desvios acima do envelope indicam associação espacial e abaixo,
+dissociação. Para garantir a significância estatística, usaremos também estatísticas escalares
+\citep{DiggleBook}. Se 
+A distribuição do
+padrão 2 será feita de acordo com dois modelos nulos diferentes. O primeiro modelo nulo é o
+processo de Poisson homogêneo, no qual os pontos têm igual probabilidade de ocorrer em
+qualquer posição da área de estudo durante as simulações. O segundo modelo nulo, usado para
+distingüir a associação causada por filtragem ambiental da causada por facilitação, é um
+processo de Poisson heterogêneo, no qual a probabilidade de ocorrência dos pontos varia no
+espaço. Assim, enquanto no processo homogêneo a intensidade do processo, λ, é constante, no
+processo heterogêneo os pontos são distribuídos proporcionalmente a uma função de
+intensidade, λ(x,y). A função de intensidade será criada a partir da distribuição dos pontos
+de cada espécie, de forma que ela será maior nas áreas onde houverem mais indivíduos daquela
+espécie. Por isso, esse modelo nulo permitirá distingüir se as populações estão associadas
+dentro das áreas de alta probabilidade de ocorrência de indivíduos (por exemplo, manchas de
+ambiente propício).
 
-Porém, como estaremos aplicando essa estatística em toda uma
-comunidade, a análise de significância par-a-par pode levar a uma alta probabilidade de erro tipo 1.
-Por isso, farei uma revisão da literatura em busca de métodos aplicáveis para um grande número de
-espécies e formas de controlar esse erro. Além disso, usarei uma simulação de um modelo neutro
-espacialmente explícito para comparar, entre o modelo neutro e os dados reais, a quantidade de pares de espécies para os quais a estatística
-$g$ é significativa.
-
-As variáveis ambientais foram coletadas por \cite{Kelly} em cada uma das subparcelas de 10mx10m.
-Para comparar a distribuição espacial dos indivíduos com as variáveis ambientais, usaremos o dado de
-densidade de indivíduos de cada espécie em cada parcela. 
+Para comparar a distribuição espacial dos indivíduos com as variáveis ambientais, 
 A associação das densidades com as variáveis ambientais será calculada por regressão
 múltipla. Se o residual da regressão for grande e tiver estrutura, o mais provável é que isso
 se deva a autocorrelação espacial dos indivíduos, resultado da agregação gerada por limitação
 de dispersão; nesse caso usaremos {\em Spatial
 EigenVector Mapping} (SEVM) para refinar a regressão. A análise SEVM cria variáveis virtuais
 extras para representar o efeito da autocorrelação espacial, e separar esse efeito dos outros
-fatores determinantes da densidade \citep{Dormann2007methods}.
+fatores determinantes da densidade \citep{refsDiniz,Dormann2007methods}.
 
-A chuva de sementes está sendo coletada mensalmente em 60 coletores circulares dispostos
-aproximadamente no centro de subparcelas que foram escolhidas aleatoriamente dentre as 100
-disponíveis. As sementes serão identificadas e classificadas de acordo com a síndrome de
-dispersão, que já foi determinada para todas as espécies da parcela \citep{martins2014}.
-Além disso, usaremos análise circular para determinar a sazonalidade da frutificação de cada
-espécie, e quais espécies frutificam nos mesmo períodos. Consideramos que para duas espécies
+Como mencionado na introdução, para duas espécies
 serem dispersas pelos mesmos dispersores, elas devem ter a mesma síndrome de dispersão, e a
 mesma época de frutificação.
+Usaremos análise circular para determinar a sazonalidade da frutificação de cada
+espécie, e quais espécies frutificam nos mesmo períodos \citep{analisecircular}. 
 Usaremos modelos lineares generalizados para medir a influência da proximidade de adultos da mesma
 espécie na densidade de sementes em cada coletor \citep{Hardesty2002}. 
 Verificaremos se existe associação espacial entre sementes de espécies diferentes usando a
