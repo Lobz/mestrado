@@ -53,8 +53,8 @@ ambientes).
 
 \section{Introdução}
 
-Uma questão fundamental em ecologia de comunidades é o que determina a riqueza (quantidade de
-espécies)da comunidade. 
+Uma questão fundamental em ecologia de comunidades é o que determina a riqueza de
+espécies em uma comunidade. 
 A riqueza pode ser muito diferente de uma comunidade para outra, sendo que as comunidades com
 maior riqueza estão na região tropical.
 No Brasil encontram-se florestas tropicais extremamente diversas, com onde centenas de
@@ -78,13 +78,15 @@ densidade impossibilita grandes agregações de indivíduos de uma mesma espéci
 produzindo um padrão espacial regular, enquanto limitação de dispersão faz com que
 indivíduos ocorram próximos de seus coespecíficos, gerando um padrão agregado.
 Assim, a distribuição espacial dos indivíduos de uma comunidade vegetal pode dar muita
-informação sobre os processos que organizam essa comunidade. 
+informação sobre os processos que organizam essa comunidade.  
 
 Porém, diferentes processos podem gerar padrões espaciais semelhantes. Por exemplo, se o
 fator mais relevante na estrutura da comunidade é a repartição de nicho, então cada espécie
 deve ocorrer em manchas de habitat favorável, e portanto o padrão espacial também será
 agregado. Em outras palavras, o mesmo padrão pode ser gerado por diferentes processos. Além
 disso, é possível que diversos processos estejam ocorrendo simultaneamente em uma comunidade.
+Por causa disso, inferir quais processos ocorrem numa comunidade a partir da distribuição
+espacial dos indivíduos não é uma tarefa simples.
 
 Um processo que não é tão estudado quanto os processos acima é a facilitação.
 “Facilitação” é o termo usado em ecologia para se referir às interações ecológicas positivas entre
@@ -94,8 +96,19 @@ A facilitação pode permitir que uma
 espécie ocupe um ambiente no qual ela não se estabeleceria por conta própria \citep{Lortie2004},
 ou acelerar a colonização de um novo ambiente (inclusive por espécies invasoras, v.
 \citep{Wundrow2012}, ou aumentar a abundância de uma espécie em determinada comunidade \citep{Alados2006}.
-Como a facilitação faz com que certas espécies se beneficiem da coexistência com certas
-outras, ela é um mecanismo que propicia a coexistência dessas espécies.
+A facilitação tem sido descrita em uma grande variedade de ambientes, em
+uma variedade de formas \citep{McIntire2014}, mas o fenômeno é mais estudado em ambientes com
+alto estresse ambiental, onde uma espécie mais tolerante ao estresse pode amenizar o estresse ambiental e
+permitir a sobrevivência de uma espécie mais sucetível \citep{BertnessHacker1994,
+BertnessCallaway1994,Brooker2008}. Em geral, a relação é assimétrica, com a espécie tolerante
+sofrendo competição da espécie sucetível. Porém, quando a facilitação é importante para o
+desempenho da espécie sucetível, ela se torna incapaz de excluir competitivamente a outra, já
+que seu desempenho é reduzido quando a espécie tolerante é rara. Dessa forma, a facilitação
+mesmo que assimétrica é reconhecida como um mecanismo de coexistência.
+Em florestas, a facilitação é freqüentemente
+estudada no contexto da sucessão ecológica \citep{refs refs refs}, mas também há evidências de que a facilitação é importante para a composição de
+comunidades de florestas tropicais maduras
+\citep{Ledo2015}.
 A facilitação também produz um padrão espacial particular, onde a espécie facilitada tende a
 ocorrer espacialmente associada à espécie facilitadora.
 Porém, outros processos podem produzir esse mesmo padrão. Por exemplo, a filtragem de nicho
@@ -139,20 +152,23 @@ de dispersão.
 Na descrição dos processos acima, recorri com frequência à consideração do que cada processo
 causaria ``na ausência de outros fatores''. O próximo passo seria nos perguntarmos qual seria
 o padrão gerado na ausência de {\em todos} esses fatores. Uma teoria fundamental para essa
-consideração é a Teoria Neutra \citep{Hubbell1979}.
-A Teoria Neutra prevê que se as populações limitam eu
+consideração é a teoria neutra \citep{Hubbell1979}.
+A teoria neutra prevê que se as populações limitam eu
 próprio crescimento exatamente na mesma medida que os das outras populações, então a
 composição da comunidade será aleatória, e a diversidade da comunidade dependerá de taxas de
 imigração e especiação \citep{Hubbell2001}. A teoria neutra não pressupõe que haja diferenças ecológicas entre
 as espécies, como a teoria de nicho, nem que haja processos que ocorram apenas em densidades
 altas; assim, é um modelo simples que pode ser usado como um modelo nulo contra o qual comparar
 todos os outros. O modelo neutro não é originalmente espacializado, e portanto, não há
-um padrão espacial associado a ele; entretanto, suas premissas podem ser usadas de base para
+um padrão espacial associado a ele; entretanto, suas premissas podem ser usadas como base para
 criar modelos espacializados simples que podem servir como modelo nulo. Além disso, esses
 modelos podem ser incrementados para incluir outros processos de forma controlada, ajudando a
 gerar previsões de que padrões seriam gerados por quais processos.
 
-A tese será dividida em três capítulos, o primeiro focado na análise de simulações a partir
+Com a combinação de simulações e análise dos dados, poderemos inferir quais dos processos
+propostos são relevantes para a configuração da comunidade estudada. Com essa informação,
+poderemos discutir se são esses processos que determinam a riqueza da comunidade.
+A tese será dividida em três capítulos, o primeiro focado na criação de simulações a partir
 do modelo neutro, e os demais abordando diferentes processos ecológicos que levam à
 associação espacial de populações de diferentes espécies. No segundo capítulo, analisaremos o
 padrão espacial da chuva de sementes em comparação com a distribuição dos adultos, de acordo com a
@@ -160,37 +176,29 @@ teoria de que a distribuição dos adultos esteja determinada pela chuva de seme
 terceiro
 capítulo, abordaremos a relação espacial entre populações de diferentes espécies e com variáveis
 ambientais, testando a hipótese da associação das espécies com características ambientais conforme a
-Teoria de Nicho.
+teoria de nicho, e a hipótese de associação espacial produzida por facilitação.'
+Na conclusão, discutiremos quais processos foram encontrados nas análises, e qual a
+importância desses processos para a riqueza da comunidade.
 
 
 \section{Justificativa}
 
 O padrão espacial de uma comunidade permite importantes inferências a respeito dos processos que
 estruturam a comunidade e permitem a coexistência de um grande número de espécies, e há atualmente
-um grande número de projetos ao redor do mundo mapeando parcelas de florestas para compreender a
-estrutura da diversidade. Entretanto, o mesmo padrão pode ser gerado por uma grande variedade de
-processos. Este projeto visa avançar a metodologia de diferenciação dos processos por trás de
-padrões espaciais, além de aplicar esses métodos para compreender os principais mecanismos
-determinando a composição da comunidade da Floresta de Restinga. Diversos estudos usam a facilitação
-como estratégia de restauração de florestas tropicais \citep{Zwiener2014,ref}, e o
-conhecimento sobre formas de facilitação pode ajudar a propor novas estratégias.
+um grande número de projetos ao redor do mundo mapeando parcelas de florestas para
+compreender os processos ecológicos que ocorrem nessas comunidades. Entretanto, o mesmo padrão pode ser gerado por uma grande variedade de
+processos. Este projeto visa identificar quais processos estão ocorrendo em uma comunidade, e
+melhor entender como esses processos estruturam espacialmente as populações afetadas. 
+O processo de facilitação ainda é pouco estudado em florestas tropicais, e por
+isso as evidências de sua ocorrência são raras, e importantes para a ecologia de comunidades.
+O impacto da dispersão pelos mesmos dispersores na estrutura espacial das populações não é
+normalmente discutido na literatura, e pode determinar a co-ocorrêcia das espécies, tendo
+conseqüências para a interação entre elas e sua coexistência. A filtragem de nicho e a
+limitação de dispersão são processos muito estudados, mas ainda há muito o que se entender
+sobre como esses processos ocorrem em cada comunidade. Em particular, não sabemos como esses
+processos funcionam na floresta de restinga.
 
 \section{Área de estudo}
-A importância de facilitação é conhecida especialmente em ambientes com alto estresse
-ambiental, onde uma espécie mais tolerante ao estresse pode amenizar o estresse ambiental e
-permitir a sobrevivência de uma espécie mens tolerante \citep{BertnessHacker1994,
-BertnessCallaway1994}. 
-A facilitação tem sido descrita em uma grande variedade de ambientes, em
-uma variedade de formas \citep{McIntire2014}, mas o fenômeno é mais estudado em ambientes com
-condições extremas, especialmente em gradientes de estresse, e na facilitação como redução do
-estresse abiótico \citep{Brooker2008}. Em florestas, a facilitação é freqüentemente
-estudada no contexto da sucessão ecológica \citep{refs refs refs}, mas recentemente, alguns
-estudos têm encontrado evidências de que a facilitação é importante para a composição de
-comunidades de florestas tropicais
-\citep{Ledo2015,refs}. A Floresta de Restinga é um ambiente propício para detecção de facilitação devido ao alto estresse
-ambiental, dado o solo arenoso e pobre em nutrientes, e a ocorrência de inundações sazonais de água
-salgada ou salobra \citep{TODO refs}. 
-
 A Mata Atlântica tem apenas 11,4 a 16\% de sua área original restantes \citep{Ribeiro2009}, e
 devido a sua alta riqueza de espécies endêmicas, a mata ao longo da costa é classificada como um dos
 hotspots para conservação da biodiversidade \citep{Myers2000}. Boa parte de sua área preservada
@@ -202,6 +210,9 @@ do Núcleo Picinguaba do Parque Estadual da Serra do Mar, instalada no âmbito d
 parcela se localiza próxima à Praia da Fazenda, Ubatuba-SP, a cerca de 10m de altitude, e parte de
 sua área é alagada periodicamente.
 
+A floresta de restinga é um ambiente propício para detecção de facilitação devido ao alto estresse
+ambiental, dado o solo arenoso e pobre em nutrientes, e a ocorrência de inundações sazonais de água
+salgada ou salobra \citep{TODO refs}. 
 Possíveis mecanismos de facilitação nesse ambiente incluiriam sombreamento
 \citep{Castanho2014}, enriquecimento de solo através de serrapilheira (achar refs, atração de
 organismos dispersores \citep{achar refs CallawayBook} ou de organismos que controlem a ação de
@@ -209,6 +220,9 @@ herbívoros \citep{refs}, associações benéficas com micorriza \citep{Simard19
 relacionada à sobrevivência à inundação\citep{Fougnies2007}), proteção
 estrutural contra estresse mecânico \citep{refs}, fusão de fustes \citep{McIntire2011}, entre
 outros.
+
+A inundação também configura heterogeneidade ambiental bem definida, o que torna o local
+propício para estudar filtragem ambiental.
 
 \section{Coleta de Dados}
 
